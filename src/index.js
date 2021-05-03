@@ -37,6 +37,8 @@ app.get("/api", async (req, res) => {
     await resultedData.map(dataIndex => {
       if ((dataIndex.language = language)) {
         count += 1;
+      }
+      if (count <= 99) {
         listObj.push(dataIndex.html_url);
       }
     });
